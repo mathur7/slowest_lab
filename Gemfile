@@ -6,6 +6,8 @@ gem 'rails', '4.0.4'
 gem 'pg'
 gem 'activerecord-import'
 
+gem 'kaminari'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '~> 3.0.3.0'
@@ -31,7 +33,7 @@ group :doc do
 end
 
 group :development do
-  gem 'better_errors'
+  # gem 'better_errors'
   gem 'quiet_assets'
   gem 'binding_of_caller'
   gem 'pry-byebug'

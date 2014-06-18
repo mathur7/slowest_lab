@@ -1,3 +1,4 @@
 <ul>
   <%= render :partial => 'user_with_shows', :collection => @users, :as => 'user'%>
+  <%= paginate(@users) %>
 </ul>

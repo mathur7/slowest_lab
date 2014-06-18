@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+
   def show
     @show = Show.find(params[:id])
     if signed_in?
@@ -6,7 +7,8 @@ class ShowsController < ApplicationController
         :show_id => @show.id).exists?
     end
   end
+
   def index
-    @shows = Show.all
+    @shows = Show.all.includes(:users).page(params[:page]).per(2)
   end
 end
